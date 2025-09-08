@@ -1,0 +1,18 @@
+{
+    "json": {
+      "enabled": true,
+      "output": "jsonlogs/log.json",
+      "formatter": "cucumber-json-formatter.exe"
+    },
+    "messages": {
+      "enabled": false,
+      "output": "jsonlogs/messages.ndjson"
+    },
+    "html": {
+      "enabled": true
+    },
+    "stepDefinitions": [
+      "cypress/step_definitions/**/*.{js,ts}",
+      "cypress/step_definitions/**/suites/**/*.{js,ts}"
+    ]
+  }

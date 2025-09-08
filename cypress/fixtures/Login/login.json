@@ -1,0 +1,19 @@
+{
+    "username": {
+        "input": "#usernameUserInput",
+        "data": {
+            "usuario": "username"          
+        }
+    },
+    "password":{
+        "input": "#password",
+        "data": {
+            "valid": "password123", 
+            "invalid": "invalidPassword"
+        }
+    },
+        "btnAdminPages": ".card-deck > :nth-child(1) > .card-body > .list-unstyled > :nth-child(1) > a",
+        "btnLogin": ".MuiButtonBase-root",
+        "btnInicio": ".sidebar-nav-dashboard sidebar-nav-homepage ng-binding",
+        "interfazInicio": "#header"
+}

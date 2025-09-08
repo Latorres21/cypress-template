@@ -1,0 +1,30 @@
+{
+  "name": "cypress-template",
+  "version": "1.0.0",
+  "description": "Plantilla base para proyectos de pruebas automatizadas con Cypress y Cucumber",
+  "main": "index.js",
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:run:native": "cypress run --spec 'cypress/e2e/**/*.cy.{js,ts}' --browser chrome --reporter mochawesome --reporter-options reportDir=cypress/reports/mocha,overwrite=true,html=true,json=true",
+    "cy:run:cucumber": "cypress run --spec 'cypress/features/**/*.feature' --browser chrome --reporter mochawesome --reporter-options reportDir=cypress/reports/mocha,overwrite=true,html=true,json=true",
+    "cy:run:all": "cypress run --spec 'cypress/{e2e/**/*.cy.{js,ts},features/**/*.feature}' --browser chrome --reporter mochawesome --reporter-options reportDir=cypress/reports/mocha,overwrite=true,html=true,json=true",
+    "report:merge": "mochawesome-merge cypress/reports/mocha/*.json > cypress/reports/output.json",
+    "report:generate": "marge cypress/reports/output.json -f report -o cypress/reports/html",
+    "test:full": "npm run cy:run:all && npm run report:merge && npm run report:generate"
+},
+  "keywords": [],
+  "author": "Soporte QA",
+  "license": "ISC",
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^22.2.0",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.5",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^5.0.0",
+    "mochawesome-report-generator": "^6.2.0",
+    "multiple-cucumber-html-reporter": "^3.9.2"
+  },
+  "dependencies": {
+    "cypress": "^13.8.0",
+    "dotenv": "^16.5.0"
+  }
+}

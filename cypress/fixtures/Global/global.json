@@ -1,0 +1,6 @@
+{
+    "busqueda": {
+        "input": "#search-landing"
+    },
+    "interfaz": ".workspace-title"
+}      
